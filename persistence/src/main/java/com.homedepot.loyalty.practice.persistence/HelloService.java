@@ -1,7 +1,6 @@
 package com.homedepot.loyalty.practice.persistence;
 
 import java.util.List;
-import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,16 +12,6 @@ public class HelloService {
   public String getHello() {
     var list = List.of("Hello      ", "World", "hi", "bye", "see", "Hello      ", "World");
 
-    var listCopy = List.copyOf(list);
-
-    var filteredList = listCopy.stream().takeWhile(n -> !n.equals("hi")).collect(Collectors.toList());
-
-    StringBuilder returnString = new StringBuilder();
-    for (var str : filteredList) {
-      returnString.append(str.stripTrailing());
-      returnString.append(" ");
-    }
-
-    return returnString.toString();
+    return null;
   }
 }
