@@ -23,6 +23,8 @@ public class HelloService {
       returnString.append(" ");
     }
 
-    return returnString.toString();
+
+
+    return returnString.toString().stripTrailing();
   }
 }
